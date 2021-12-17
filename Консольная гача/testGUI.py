@@ -38,7 +38,7 @@ def SummStav():
         MessageLast = Label(window, text="Ваш баланс после ставки: ",bg="gray20" ,fg="white", font=("Arial Bold", 16))
         MessageLast.place(x = 40, y = 80)
 
-        #Дрисня
+        #FIXME Дрисня
         balance -= SummStavkaInfo
         MessageLastLast = Label(window, text="Ваш баланс после ставки : ".format(balance),bg="gray20" ,fg="white", font=("Arial Bold", 16))
         MessageLastLast.place(x = 300, y = 80)
