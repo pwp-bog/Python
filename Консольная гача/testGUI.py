@@ -79,7 +79,7 @@ def RedColorInfo():
     global WhyColorInfo
     WhyColorInfo = "red"  #  Это переменная хранящая цвет
     global text
-    text = "Введите сумму для ставки: "
+    text = "Введите сумму Идля ставки: "
     lbl['text'] = text
     RedColorButton.destroy()
     BlackColorButton.destroy()
