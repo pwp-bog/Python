@@ -1,5 +1,5 @@
 def my_func():
-    print("Vs code this is cool")
+    print("test text")
 
 
 if 1 > 0:
