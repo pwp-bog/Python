@@ -1,6 +1,14 @@
-def my_func():
-    print("test text")
+n = int(input())
+
+list = []
+
+for i in range(n):
+    str = input()
+
+    if str not in list:
+        list.append(str)
+    else:
+        continue
 
 
-if 1 > 0:
-    my_func()
+print(*list, sep="\n")
