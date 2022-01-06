@@ -3,12 +3,12 @@ n = int(input())
 list = []
 
 for i in range(n):
-    str = input()
+    list.append(input())
 
-    if str not in list:
-        list.append(str)
+find_string = input()
+
+for i in list:
+    if find_string.upper() in i.upper():
+        print(i)
     else:
         continue
-
-
-print(*list, sep="\n")
