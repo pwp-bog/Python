@@ -1,8 +1,1 @@
-n = input().split()
-n = [int(x) for x in n]
-
-n.sort()
-print(*n, sep=" ")
-
-n.sort(reverse=True)
-print(*n, sep=" ")
+print(*[m**2 for m in map(int, input().split()) if m % 2 == 0 and m**2 % 10 != 4])
