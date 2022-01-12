@@ -19,9 +19,6 @@ keyb.write("www.vk.com", delay=0.01)
 keyb.press("Enter")
 keyb.release("Enter")
 
-<<<<<<< HEAD
 # Матвей должен меня слушаться!!!
 # Делает вид что он спит)
-=======
 # Test команды git pull
->>>>>>> 76d9ab7ceb474ee9ebc24f743f907bdaaf7e7419
