@@ -20,4 +20,3 @@ keyb.press("Enter")
 keyb.release("Enter")
 
 # Git push
-# Ты лох
