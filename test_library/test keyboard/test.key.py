@@ -18,3 +18,5 @@ keyb.write("www.vk.com", delay=0.01)
 
 keyb.press("Enter")
 keyb.release("Enter")
+
+# Test команды git pull
