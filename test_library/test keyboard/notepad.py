@@ -1,5 +1,6 @@
-import keyboard as board
 from time import sleep
+
+import keyboard as board
 
 for i in range(1, 6):
     sleep(1)
