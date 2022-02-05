@@ -13,3 +13,6 @@ for q in range(5):
 		board.send("Enter")
 print("text")
 print("bebra")
+
+
+print("text")
