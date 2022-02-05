@@ -8,5 +8,7 @@ for i in range(1, 6):
 
 for q in range(5):
 	for i in range(10):
-		board.write(str(")"), delay=0.000000000000000000000000000000000000000000000000000000000000000005)
+		board.write(str(
+				")"), delay=0.000000000000000000000000000000000000000000000000000000000000000005)
 		board.send("Enter")
+print("text")
