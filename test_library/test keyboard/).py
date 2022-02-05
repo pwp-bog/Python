@@ -12,3 +12,4 @@ for q in range(5):
 				")"), delay=0.000000000000000000000000000000000000000000000000000000000000000005)
 		board.send("Enter")
 print("text")
+print("bebra")
