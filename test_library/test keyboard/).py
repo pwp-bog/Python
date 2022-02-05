@@ -14,5 +14,4 @@ for q in range(5):
 print("text")
 print("bebra")
 
-
-print("text")
+a = 4
