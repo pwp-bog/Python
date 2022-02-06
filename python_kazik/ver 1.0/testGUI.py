@@ -4,22 +4,22 @@ from tkinter.font import names
 
 #  Функционал python казика
 
-def SummStav():
+def sum_balance():
 
     global SummStavkaInfo
     global balance
-    SummStavkaInfo = InputStavkaSumInfo.get()
-    InputStavkaSumButton.destroy()
-    InputStavkaSumInfo.destroy()
+    sum_balance_info = input_sum_info.get()
+    input_sum_button.destroy()
+    input_sum_info.destroy()
 
     global SRandom
     SRandom = choice(foo)
 
 
-    if(SummStavkaInfo > balance):
+    if(sum_balance_info > balance):
         text = "Ошибка сумма ставки не может превышать баланс, попробуйте снова... "
         lbl['text'] = text
-    if(SummStavkaInfo <= balance):
+    if(sum_balance_info <= balance):
         text = "Ставка принята"
         lbl['text'] = text
 
@@ -41,30 +41,30 @@ def SummStav():
         MessageLast.place(x = 40, y = 80)
 
         #FIXME Дрисня
-        balance -= SummStavkaInfo
+        balance -= sum_balance_info
         MessageLastLast = Label(window, text="Ваш баланс после ставки : ".format(balance),bg="gray20" ,fg="white", font=("Arial Bold", 16))
         MessageLastLast.place(x = 300, y = 80)
 
         if((SRandom % 2 == 0) and (WhyColorInfo == "red")):
             text = "Вы выйграли)"
             lbl['text'] = text
-            SummStavkaInfo *= 2
-            balance += SummStavkaInfo
+            sum_balance_info *= 2
+            balance += sum_balance_info
 
 
 
         elif((SRandom % 2 != 0) and (WhyColorInfo == "black")):
             text = "Вы выйграли)"
             lbl['text'] = text
-            SummStavkaInfo *= 2
-            balance += SummStavkaInfo
+            sum_balance_info *= 2
+            balance += sum_balance_info
 
 
         elif((SRandom == 36) and (WhyColorInfo == "green")):
             text = "Вы выйграли)"
             lbl['text'] = text
-            SummStavkaInfo *= 14
-            balance += SummStavkaInfo
+            sum_balance_info *= 14
+            balance += sum_balance_info
 
 
         else:
@@ -88,15 +88,15 @@ def RedColorInfo():
     GreenColorButton.destroy()
 
 
-    global InputStavkaSumInfo
-    InputStavkaSumInfo = Entry(window)
-    InputStavkaSumInfo.place(x = 5, y = 50, height=30,width=200)
-    InputStavkaSumInfo.focus()
+    global input_sum_info
+    input_sum_info = Entry(window)
+    input_sum_info.place(x = 5, y = 50, height=30,width=200)
+    input_sum_info.focus()
 
 
-    global InputStavkaSumButton
-    InputStavkaSumButton = Button(window, text="Потвердить", fg="white", bg="red4",command=SummStav)
-    InputStavkaSumButton.place(x = 225, y = 50, height=30, width=100)
+    global input_sum_button
+    input_sum_button = Button(window, text="Потвердить", fg="white", bg="red4",command=sum_balance)
+    input_sum_button.place(x = 225, y = 50, height=30, width=100)
 
 
 
@@ -111,15 +111,15 @@ def BlackColorInfo():
     GreenColorButton.destroy()
 
 
-    global InputStavkaSumInfo
-    InputStavkaSumInfo = Entry(window)
-    InputStavkaSumInfo.place(x = 5, y = 50, height=30,width=200)
-    InputStavkaSumInfo.focus()
+    global input_sum_info
+    input_sum_info = Entry(window)
+    input_sum_info.place(x = 5, y = 50, height=30,width=200)
+    input_sum_info.focus()
 
 
-    global InputStavkaSumButton
-    InputStavkaSumButton = Button(window, text="Потвердить", fg="white", bg="red4",command=SummStav)
-    InputStavkaSumButton.place(x = 225, y = 50, height=30, width=100)
+    global input_sum_button
+    input_sum_button = Button(window, text="Потвердить", fg="white", bg="red4",command=sum_balance)
+    input_sum_button.place(x = 225, y = 50, height=30, width=100)
 
 
 def GreenColorInfo():
@@ -133,15 +133,15 @@ def GreenColorInfo():
     GreenColorButton.destroy()
 
 
-    global InputStavkaSumInfo
-    InputStavkaSumInfo = Entry(window)
-    InputStavkaSumInfo.place(x = 5, y = 50, height=30,width=200)
-    InputStavkaSumInfo.focus()
+    global input_sum_info
+    input_sum_info = Entry(window)
+    input_sum_info.place(x = 5, y = 50, height=30,width=200)
+    input_sum_info.focus()
 
 
-    global InputStavkaSumButton
-    InputStavkaSumButton = Button(window, text="Потвердить", fg="white", bg="red4",command=SummStav)
-    InputStavkaSumButton.place(x = 225, y = 50, height=30, width=100)
+    global input_sum_button
+    input_sum_button = Button(window, text="Потвердить", fg="white", bg="red4",command=sum_balance)
+    input_sum_button.place(x = 225, y = 50, height=30, width=100)
 
 
 
