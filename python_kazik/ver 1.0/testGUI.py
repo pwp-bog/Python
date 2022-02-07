@@ -194,5 +194,4 @@ InputInfo.place(x = 225, y = 50, height=30, width=100)
 
 
 
-
 window.mainloop()
