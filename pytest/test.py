@@ -1,23 +1,35 @@
-from cgi import test
+import pymem
+import pymem.process
+import requests
+from threading import Thread
+import keyboard
+import time
 
-list = [0, 0, 1, 2, 3, 4, 5, 5, 6, 7]
+pm = pymem.Pymem("csgo.exe")
+client = pymem.process.module_from_name(
+    pm.process_handle, "client.dll").lpBaseOfDll
 
-for i in list:
-	if i in list:
-		print("Есть дубликаты")
+offsets = 'https://raw.githubusercontent.com/frk1/hazedumper/master/csgo.json'
+response = requests.get(offsets).json()
 
-a = input()
-if 1 <= 0:
-	print("text")
+dwLocalPlayer = int(response["signatures"]["dwLocalPlayer"])
+dwForceJump = int(response["signatures"]["dwForceJump"])
 
-test = 3
+m_fFlags = int(response["netvars"]["m_fFlags"])
 
-a = "string very long string"
 
-a = 5
+def BunnyHop():
+    while True:
+        if pm.read_int(client + dwLocalPlayer):
+            player = pm.read_int(client + dwLocalPlayer)
+            force_jump = client + dwForceJump
+            on_ground = pm.read_int(player + m_fFlags)
 
-a = a + a
+            if keyboard.is_pressed("space"):
+                if on_ground == 257:
+                    pm.write_int(force_jump, 5)
+                    time.sleep(0.17)
+                    pm.write_int(force_jump, 4)
 
-a = "text"
 
-# this is text
+Thread(target=BunnyHop).start()
