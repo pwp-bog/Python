@@ -72,11 +72,6 @@ def sum_balance():
             lbl['text'] = text
 
 
-
-
-
-
-
 def RedColorInfo():
     global WhyColorInfo
     WhyColorInfo = "red"  #  Это переменная хранящая цвет
@@ -97,7 +92,6 @@ def RedColorInfo():
     global input_sum_button
     input_sum_button = Button(window, text="Потвердить", fg="white", bg="red4",command=sum_balance)
     input_sum_button.place(x = 225, y = 50, height=30, width=100)
-
 
 
 def BlackColorInfo():
@@ -144,7 +138,6 @@ def GreenColorInfo():
     input_sum_button.place(x = 225, y = 50, height=30, width=100)
 
 
-
 def inputINFO():
     global balance
     balance = InputInformation.get()
@@ -168,7 +161,6 @@ def inputINFO():
     global GreenColorButton
     GreenColorButton = Button(window, text="Зелёный", fg="white", bg="green",command=GreenColorInfo)
     GreenColorButton.place(x = 450, y = 50, height=30, width=100)
-
 
 
 #  Сам гуи
