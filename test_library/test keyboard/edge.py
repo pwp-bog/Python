@@ -6,7 +6,7 @@ sleep(0.3)
 board.send("win")
 
 sleep(0.3)
-board.write("Edge", delay=0.01)
+board.write("edge", delay=0.01)
 
 sleep(0.3)
 board.send("Enter")
