@@ -1,5 +1,3 @@
-
-
 class calculator:
     def __init__(self, number1, operator, number2) -> None:
         self.num1, self.num2, self.op = int(number1), int(number2), operator
