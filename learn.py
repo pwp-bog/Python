@@ -18,3 +18,4 @@ class calculator:
 
 n1, op, n2 = input().split(" ")
 value = calculator(n1, op, n2)
+
